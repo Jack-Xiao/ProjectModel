@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include layout="@layout/source_loading" />
+
+        <RelativeLayout
+            android:id="@+id/error_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btn_home"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="20dp"
+                android:text="返回首页"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_last_page"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_above="@id/btn_home"
+                android:text="上一页"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/warnning_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/btn_last_page"
+                android:layout_marginBottom="20dp"
+                android:text="先别急着走啦，要不和我一起度个小假？"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_error"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_above="@id/warnning_message"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/err404"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>
